@@ -18,7 +18,9 @@ public class Atm {
                 "list - get list of all cards from server\n" +
                 "exit - close ATM\n");
         try {
+            //connecting to registry on port 2732
             registry = LocateRegistry.getRegistry(2732);
+            //getting object with name "cardserver" from registry
             BankRmi bank = (BankRmi) registry.lookup(UNIQUE_BINDING_NAME);
             boolean cont = true;
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
