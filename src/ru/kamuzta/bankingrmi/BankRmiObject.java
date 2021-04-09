@@ -5,38 +5,36 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BankRmiObject implements BankRmi {
-    private List<Card> cardList = new ArrayList<Card>();
+    private static final List<Card> cardList = new ArrayList<>();
 
     @Override
     public String createCard(String cardHolderName) throws RemoteException {
-        String message = "";
         synchronized (cardList) {
             Card newCard = new Card(cardHolderName);
             cardList.add(newCard);
-            message = "Card # " + newCard.getCardNumber() + " created!";
+            String message = "Card # " + newCard.getCardNumber() + " created!";
             System.out.println(message);
             return message;
         }
     }
 
     @Override
-    public String getCardBalance(long cardNumber) throws RemoteException {
+    public synchronized String getCardBalance(long cardNumber) throws RemoteException {
         boolean status = false;
         String message = "";
-        synchronized (cardList) {
-            for (Card card : cardList) {
-                if (card.getCardNumber() == cardNumber) {
-                    message = card.getCardNumber() + " balance is: " + card.getCardBalance();
-                    status = true;
-                }
+        for (Card card : cardList) {
+            if (card.getCardNumber() == cardNumber) {
+                message = card.getCardNumber() + " balance is: " + card.getCardBalance();
+                status = true;
             }
-            if (!status) {
-                message = "Wrong cardNumber!";
-            }
-
-            System.out.println(message);
-            return message;
         }
+        if (!status) {
+            message = "Wrong cardNumber!";
+        }
+
+        System.out.println(message);
+        return message;
+
     }
 
     @Override

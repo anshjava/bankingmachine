@@ -6,8 +6,8 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
 public class Atm {
-    public static final String UNIQUE_BINDING_NAME = "cardserver";
-    public static Registry registry;
+    private static final String UNIQUE_BINDING_NAME = "cardserver";
+    private static Registry registry;
 
     public static void main(String[] args) {
         System.out.println("ATM started! Aviable commands:\n" +

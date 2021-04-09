@@ -7,8 +7,8 @@ import java.rmi.server.UnicastRemoteObject;
 
 //This is Server program to start
 public class ProcessingServer {
-    public static final String UNIQUE_BINDING_NAME = "cardserver";
-    public static Registry registry = null;
+    private static final String UNIQUE_BINDING_NAME = "cardserver";
+    private static Registry registry = null;
     public static void main(String[] args) {
         try {
             final BankRmiObject server = new BankRmiObject();
