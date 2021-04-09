@@ -19,21 +19,23 @@ public class BankRmiObject implements BankRmi {
     }
 
     @Override
-    public synchronized String getCardBalance(long cardNumber) throws RemoteException {
+    public String getCardBalance(long cardNumber) throws RemoteException {
         boolean status = false;
         String message = "";
-        for (Card card : cardList) {
-            if (card.getCardNumber() == cardNumber) {
-                message = card.getCardNumber() + " balance is: " + card.getCardBalance();
-                status = true;
+        synchronized (cardList) {
+            for (Card card : cardList) {
+                if (card.getCardNumber() == cardNumber) {
+                    message = card.getCardNumber() + " balance is: " + card.getCardBalance();
+                    status = true;
+                }
             }
-        }
-        if (!status) {
-            message = "Wrong cardNumber!";
-        }
+            if (!status) {
+                message = "Wrong cardNumber!";
+            }
 
-        System.out.println(message);
-        return message;
+            System.out.println(message);
+            return message;
+        }
 
     }
 
