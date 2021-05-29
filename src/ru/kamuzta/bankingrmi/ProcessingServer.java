@@ -13,7 +13,7 @@ public class ProcessingServer {
         try {
             final BankRmiObject server = new BankRmiObject();
             System.out.println("BankRmiObject created");
-            registry = LocateRegistry.createRegistry(2732);
+            registry = LocateRegistry.createRegistry(2727);
             System.out.println("Registry created");
             Remote stub = UnicastRemoteObject.exportObject(server, 0);
             registry.bind(UNIQUE_BINDING_NAME, stub);
