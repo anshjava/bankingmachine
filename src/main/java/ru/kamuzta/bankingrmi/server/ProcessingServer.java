@@ -1,4 +1,5 @@
-package ru.kamuzta.bankingrmi;
+package ru.kamuzta.bankingrmi.server;
+
 
 import java.rmi.Remote;
 import java.rmi.registry.LocateRegistry;
@@ -7,8 +8,9 @@ import java.rmi.server.UnicastRemoteObject;
 
 //This is Server program to start
 public class ProcessingServer {
-    private static final String UNIQUE_BINDING_NAME = "cardserver";
+    private static final String UNIQUE_BINDING_NAME = "bankingRMIServer";
     private static Registry registry = null;
+
     public static void main(String[] args) {
         try {
             final BankRmiObject server = new BankRmiObject();
@@ -18,6 +20,7 @@ public class ProcessingServer {
             Remote stub = UnicastRemoteObject.exportObject(server, 0);
             registry.bind(UNIQUE_BINDING_NAME, stub);
             System.out.println(UNIQUE_BINDING_NAME + " binded");
+            System.out.println(registry);
             System.out.println("Ready to work with ATM!");
             Thread.sleep(Integer.MAX_VALUE);
         } catch (Exception e) {

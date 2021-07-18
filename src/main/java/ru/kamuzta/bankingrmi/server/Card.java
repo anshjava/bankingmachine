@@ -1,4 +1,4 @@
-package ru.kamuzta.bankingrmi;
+package ru.kamuzta.bankingrmi.server;
 
 //This is card object
 public class Card {
