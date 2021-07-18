@@ -1,7 +1,7 @@
-package ru.kamuzta.bankingrmi.server.command;
+package ru.kamuzta.bankingmachine.server.command;
 
-import ru.kamuzta.bankingrmi.server.*;
-import ru.kamuzta.bankingrmi.server.exception.*;
+import ru.kamuzta.bankingmachine.server.*;
+import ru.kamuzta.bankingmachine.server.exception.*;
 
 import java.util.HashMap;
 import java.util.Map;

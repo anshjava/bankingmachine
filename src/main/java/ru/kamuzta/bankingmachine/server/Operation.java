@@ -1,4 +1,4 @@
-package ru.kamuzta.bankingrmi.server;
+package ru.kamuzta.bankingmachine.server;
 
 public enum Operation {
     LOGIN,

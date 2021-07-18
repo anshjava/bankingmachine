@@ -1,4 +1,4 @@
-package ru.kamuzta.bankingrmi.server;
+package ru.kamuzta.bankingmachine.server;
 
 import java.util.Collection;
 import java.util.HashMap;

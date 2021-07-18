@@ -1,9 +1,8 @@
-package ru.kamuzta.bankingrmi.server.command;
+package ru.kamuzta.bankingmachine.server.command;
 
-import ru.kamuzta.bankingrmi.ConsoleHelper;
-import ru.kamuzta.bankingrmi.server.Language;
-import ru.kamuzta.bankingrmi.server.Operation;
-import ru.kamuzta.bankingrmi.server.exception.InterruptOperationException;
+import ru.kamuzta.bankingmachine.ConsoleHelper;
+import ru.kamuzta.bankingmachine.server.Language;
+import ru.kamuzta.bankingmachine.server.exception.InterruptOperationException;
 
 import java.util.Locale;
 import java.util.ResourceBundle;

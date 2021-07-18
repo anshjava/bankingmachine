@@ -1,10 +1,7 @@
-package ru.kamuzta.bankingrmi.server.command;
+package ru.kamuzta.bankingmachine.server.command;
 
-import ru.kamuzta.bankingrmi.*;
-import ru.kamuzta.bankingrmi.server.*;
-import ru.kamuzta.bankingrmi.server.exception.*;
-
-import java.util.ResourceBundle;
+import ru.kamuzta.bankingmachine.*;
+import ru.kamuzta.bankingmachine.server.exception.*;
 
 class ExitCommand implements Command {
     @Override

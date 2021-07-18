@@ -1,8 +1,8 @@
-package ru.kamuzta.bankingrmi;
+package ru.kamuzta.bankingmachine;
 
 import org.junit.Assert;
 import org.junit.Test;
-import ru.kamuzta.bankingrmi.server.Language;
+import ru.kamuzta.bankingmachine.server.Language;
 
 import java.nio.charset.Charset;
 import java.util.Locale;

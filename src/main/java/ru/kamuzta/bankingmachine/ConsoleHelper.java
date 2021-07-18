@@ -1,7 +1,7 @@
-package ru.kamuzta.bankingrmi;
+package ru.kamuzta.bankingmachine;
 
-import ru.kamuzta.bankingrmi.server.*;
-import ru.kamuzta.bankingrmi.server.exception.*;
+import ru.kamuzta.bankingmachine.server.*;
+import ru.kamuzta.bankingmachine.server.exception.*;
 
 import java.io.*;
 import java.util.ResourceBundle;

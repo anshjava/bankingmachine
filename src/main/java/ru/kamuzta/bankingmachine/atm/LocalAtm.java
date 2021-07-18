@@ -1,9 +1,9 @@
-package ru.kamuzta.bankingrmi.atm;
+package ru.kamuzta.bankingmachine.atm;
 
-import ru.kamuzta.bankingrmi.*;
-import ru.kamuzta.bankingrmi.server.*;
-import ru.kamuzta.bankingrmi.server.exception.*;
-import ru.kamuzta.bankingrmi.server.command.*;
+import ru.kamuzta.bankingmachine.*;
+import ru.kamuzta.bankingmachine.server.*;
+import ru.kamuzta.bankingmachine.server.exception.*;
+import ru.kamuzta.bankingmachine.server.command.*;
 
 import java.util.Locale;
 

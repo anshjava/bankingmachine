@@ -1,4 +1,4 @@
-package ru.kamuzta.bankingrmi.server.exception;
+package ru.kamuzta.bankingmachine.server.exception;
 
 public class NotEnoughMoneyException extends Exception {
 }
